@@ -1,0 +1,16 @@
+Feature: Casos de prueba de Teacher
+
+    @ignore
+    Scenario: obtengo todos los profesores disponibles
+        When obtengo los profesores
+        Then se devuelven todos los profesores
+
+    @ignore
+    Scenario: obtengo todos los profesores disponibles
+        Given tengo los siguientes profesores
+            | name   | email             |
+            | aitor  | aitor@aitor.com   |
+            | leti   | leti@leti.com     |
+            | ivette | ivette@ivette.com |
+        When llamo para obtener los profesores
+        Then se devuelven todos los profesores
