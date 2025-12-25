@@ -7,6 +7,16 @@
 # Dudas
 1.Si tengo varias features como puedo omitir las que no me interesan y usar solo la que yo quiera? intente con @ignore pero sigue pillandola (chat me sugirio .disabled para que no quiera usar)
 2.Los Gerkhin los usais en Español o Ingles?
+3.Cuando usar campo y cuando usar parametro
+4.Hay que ser muy "estricto" o "minucioso" en las descripciones?
+    Ejemplo: When el usuario crea un nuevo teacher, rellenando todos los campos, pero en surname guarda solo numeros
+             Vs
+             When el usuario crea un nuevo teacher, pero en surname guarda solo numeros
+
+5.Preguntar si este tipo de escenarios es recomendable definirlos asi:  Creacion de nuevo teacher con valor int en name (en referencia al int)
+
+6.Como es mejor declarar los steps? " el usuario crea tal tal..." o " actualizo tal tal  "
+
 
 
 # Ejecutar las pruebas

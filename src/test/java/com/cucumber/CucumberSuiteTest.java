@@ -7,10 +7,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 import static io.cucumber.junit.platform.engine.Constants.GLUE_PROPERTY_NAME;
+import static io.cucumber.junit.platform.engine.Constants.FILTER_TAGS_PROPERTY_NAME;
 
 @Suite
 @SelectClasspathResource("e2e/features")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.cucumber")
+@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@smoke")
 public class CucumberSuiteTest {
 
     @Bean

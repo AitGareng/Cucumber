@@ -1,6 +1,6 @@
 Feature: Casos de prueba GET de Teacher
 
-    
+
     Scenario: obtengo todos los profesores disponibles
         When obtengo los profesores
         Then se devuelven todos los profesores
@@ -9,8 +9,6 @@ Feature: Casos de prueba GET de Teacher
         When no existen profesores
         Then se devuelve un mensaje "no hay profesores disponibles"
 
-    Scenario: obtengo todos los profesores disponibles
-        When 
 
     @ignore
     Scenario: obtengo todos los profesores disponibles

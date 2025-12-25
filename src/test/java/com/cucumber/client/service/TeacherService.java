@@ -23,7 +23,8 @@ public class TeacherService {
     private RestTemplate restTemplate;
 
     public List<TeacherDTO> getTeachers(){
-        UriComponentsBuilder urlBuilder = UriComponentsBuilder.fromUriString("http://localhost:8080/teacher");
+        UriComponentsBuilder urlBuilder = 
+                UriComponentsBuilder.fromUriString("http://localhost:8080/teacher");
 
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
@@ -38,4 +39,26 @@ public class TeacherService {
 
         return response.getBody();
     }
+
+    public TeacherDTO createTeacher(TeacherDTO teacherDTO) {
+
+    UriComponentsBuilder urlBuilder =
+            UriComponentsBuilder.fromUriString("http://localhost:8080/teacher");
+
+    HttpHeaders headers = new HttpHeaders();
+    headers.setContentType(MediaType.APPLICATION_JSON);
+    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+
+    HttpEntity<TeacherDTO> requestEntity = new HttpEntity<>(teacherDTO, headers);
+
+    ResponseEntity<TeacherDTO> response = this.restTemplate.exchange(
+            urlBuilder.encode().toUriString(),
+            HttpMethod.POST,
+            requestEntity,
+            TeacherDTO.class
+    );
+
+    return response.getBody();
+}
+
 }
